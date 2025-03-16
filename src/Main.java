@@ -20,10 +20,12 @@ public class Main {
         }
         System.out.println("Задача 3");
         int year = 2024;
-        if ( year == 2024){
-            System.out.println(year + " год является високостным.");
-        } else if (year < 2020 || year > 2024){
-            System.out.println(year + " год не является високостным.");
+        if (year > 1584 && ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))) {
+            System.out.println(year + " год является високосным");
+        } else if (year > 1584) {
+            System.out.println(year + " год не является високосным");
+        } else {
+            System.out.println("Год не может быть меньше 1585");
         }
         System.out.println("Задача 4");
         int deliveryDistance = 95;
@@ -41,7 +43,7 @@ public class Main {
         switch (monthNumber) {
             case 1:
             case 2:
-            case 13:
+            case 12:
                 System.out.println("Зима.");
                 break;
             case 3:
@@ -62,6 +64,5 @@ public class Main {
             default:
                 System.out.println("Неизвестно какой сегодня месяц.");
         }
-
     }
 }
