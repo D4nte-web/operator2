@@ -20,69 +20,44 @@ public class Main {
         }
         System.out.println("Задача 3");
         int year = 2024;
-        switch (year) {
-            case 2023:
-                System.out.println("2023 год не является високостным.");
-                break;
-            case 2024:
-                System.out.println("2024 год является високостным.");
-                break;
-            default:
-                System.out.println("Неизвестно является ли год високостным.");
+        if ( year == 2024){
+            System.out.println(year + " год является високостным.");
+        } else if (year < 2020 || year > 2024){
+            System.out.println(year + " год не является високостным.");
         }
         System.out.println("Задача 4");
         int deliveryDistance = 95;
-        switch (deliveryDistance) {
-            case 20:
-                System.out.println("Потребуется дней:1.");
-                break;
-            case 50:
-                System.out.println("Потребуется дней:2.");
-                break;
-            case 95:
-                System.out.println("Потребуется дней:3.");
-                break;
-            default:
-                System.out.println("Доставки нет");
+        if (deliveryDistance < 20){
+            System.out.println("Потребуется дней: 1");
+        } else if (deliveryDistance > 20 && deliveryDistance < 60){
+            System.out.println("Потребуется дней: 2");
+        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
+            System.out.println("Потребуется дней: 3");
+        }else {
+            System.out.println("Доставки нет.");
         }
         System.out.println("Задача 5");
         int monthNumber = 12;
         switch (monthNumber) {
             case 1:
-                System.out.println("Январь.");
-                break;
             case 2:
-                System.out.println("Февраль.");
+            case 13:
+                System.out.println("Зима.");
                 break;
             case 3:
-                System.out.println("Март.");
-                break;
             case 4:
-                System.out.println("Апрель.");
-                break;
             case 5:
-                System.out.println("Май.");
+                System.out.println("Весна.");
                 break;
             case 6:
-                System.out.println("Июнь.");
-                break;
             case 7:
-                System.out.println("Июль.");
-                break;
             case 8:
-                System.out.println("Август.");
+                System.out.println("Лето.");
                 break;
             case 9:
-                System.out.println("Сентябрь.");
-                break;
             case 10:
-                System.out.println("Октябрь.");
-                break;
             case 11:
-                System.out.println("Ноябрь.");
-                break;
-            case 13:
-                System.out.println("Декабрь.");
+                System.out.println("Осень.");
                 break;
             default:
                 System.out.println("Неизвестно какой сегодня месяц.");
